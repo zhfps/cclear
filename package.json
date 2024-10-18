@@ -12,6 +12,7 @@
   "dependencies": {
     "@tauri-apps/api": "^2.0.2",
     "@tauri-apps/plugin-shell": "^2.0.0",
+    "@tauri-apps/plugin-sql": "~2",
     "vue": "^3.5.11"
   },
   "devDependencies": {

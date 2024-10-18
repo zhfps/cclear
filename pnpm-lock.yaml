@@ -14,6 +14,9 @@ importers:
       '@tauri-apps/plugin-shell':
         specifier: ^2.0.0
         version: 2.0.0
+      '@tauri-apps/plugin-sql':
+        specifier: ~2
+        version: 2.0.0
       vue:
         specifier: ^3.5.11
         version: 3.5.11(typescript@5.6.3)
@@ -509,6 +512,9 @@ packages:
 
   '@tauri-apps/plugin-shell@2.0.0':
     resolution: {integrity: sha512-OpW2+ycgJLrEoZityWeWYk+6ZWP9VyiAfbO+N/O8VfLkqyOym8kXh7odKDfINx9RAotkSGBtQM4abyKfJDkcUg==}
+
+  '@tauri-apps/plugin-sql@2.0.0':
+    resolution: {integrity: sha512-H4dodCbRvmaHGx7/E1hPh/v7Qf8/pI0XjmRWgMkCeC8NSPXnjYcpm5+HUhBeHUM5zkB85/Mucg4gpQZ0Dj33gQ==}
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
@@ -1510,6 +1516,10 @@ snapshots:
       '@tauri-apps/cli-win32-x64-msvc': 2.0.2
 
   '@tauri-apps/plugin-shell@2.0.0':
+    dependencies:
+      '@tauri-apps/api': 2.0.2
+
+  '@tauri-apps/plugin-sql@2.0.0':
     dependencies:
       '@tauri-apps/api': 2.0.2
 
