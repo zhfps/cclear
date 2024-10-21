@@ -2,8 +2,11 @@
 import Sqlite from '@tauri-apps/plugin-sql'
 import { appConfigDir } from '@tauri-apps/api/path'
 
-
-export async function loadDb() {
+/**
+ * loadDb
+ * @returns { Promise<Sqlite> }
+ */
+export async function loadDb(): Promise<Sqlite> {
   const dbFile = import.meta.env.DEV ? 'config.dev.db' : 'config.db'
   const config = await appConfigDir()
   const dbPath = `${ config }\\${ dbFile }`
@@ -14,6 +17,9 @@ export async function loadDb() {
 
 }
 
+/**
+ * initSqlite
+ */
 export async function initSqlite() {
   try{
     initSQL()
