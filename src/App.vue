@@ -34,10 +34,6 @@
         >
       </a>
     </div>
-
     <p>Click on the Tauri, Vite, and Vue logos to learn more.</p>
-    <Suspense>
-      <Greet />
-    </Suspense>
   </div>
 </template>
