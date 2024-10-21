@@ -52,15 +52,6 @@ export default [
       '@stylistic/no-extra-semi': 'error',
       '@stylistic/template-curly-spacing': ['error', 'always'],
       '@stylistic/space-before-blocks': ['error', 'always'],
-      '@stylistic/indent': ['error', 2],
-      '@stylistic/object-curly-newline': ['error', {
-        'ObjectExpression': {
-          // 如果对象有属性，则要求换行。空对象则忽略
-          'minProperties': 1,
-          // 保持一致性
-          'consistent': true
-        }
-      }],
       '@stylistic/object-property-newline': 'error',
       '@stylistic/key-spacing': ['error', {
         'beforeColon': false,
@@ -382,6 +373,7 @@ export default [
       '@typescript-eslint/no-unused-vars': 1,
       '@typescript-eslint/no-empty-function': 0,
       '@typescript-eslint/no-non-null-assertion': 0,
+      '@typescript-eslint/no-empty-object-type': 'off',
       '@typescript-eslint/consistent-type-imports': ['error', {
         fixStyle: 'separate-type-imports',
         disallowTypeAnnotations: false
