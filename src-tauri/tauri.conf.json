@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "Cclear",
+        "title": "cclear",
         "transparent": true,
         "decorations": true,
         "width": 800,
