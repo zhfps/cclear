@@ -1,17 +1,12 @@
 <script lang="ts" setup>
-  import { NButton, NCard, NConfigProvider, NSpace, lightTheme } from 'naive-ui'
+  import { NConfigProvider, lightTheme } from 'naive-ui'
+  import Layout from './layout/Layout.vue'
 </script>
 
 <template>
   <div class="c-container">
     <n-config-provider :theme="lightTheme">
-      <n-card>
-        <n-space>
-          <n-button type="primary">
-            浅色
-          </n-button>
-        </n-space>
-      </n-card>
+      <Layout />
     </n-config-provider>
   </div>
 </template>
