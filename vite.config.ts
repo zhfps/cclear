@@ -1,18 +1,11 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
 // @ts-expect-error process is a nodejs global
 const host = process.env.TAURI_DEV_HOST
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
-  // css: {
-  //   preprocessorOptions: {
-  //     scss: {
-  //       includePaths: ['node_modules/bootstrap/scss']
-  //     }
-  //   }
-  // },
-  plugins: [vue()],
+  plugins: [svelte()],
   clearScreen: false,
   server: {
     port: 1420,
@@ -26,7 +19,6 @@ export default defineConfig(async () => ({
       }
       : undefined,
     watch: {
-      // 3. tell vite to ignore watching `src-tauri`
       ignored: ['**/src-tauri/**']
     }
   }

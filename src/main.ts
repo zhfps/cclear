@@ -1,9 +1,9 @@
-
-import { createApp } from 'vue'
-import 'vfonts/FiraCode.css'
+import { mount } from 'svelte'
+import App from './App.svelte'
 import './styles/index.scss'
-import App from './App.vue'
 
-const app = createApp(App)
+const app = mount(App, {
+  target: document.getElementById('app')!
+})
 
-app.mount('#app')
+export default app
