@@ -10,7 +10,9 @@
     | "注册表"
     | "工具"
     | "选项";
-  let selectedMenu: MenuItem = "Health Check"
+
+
+  let selectedMenu: MenuItem = $state("Health Check")
   function selectMenu(menu: MenuItem) {
     selectedMenu = menu
   }
@@ -29,7 +31,7 @@
               <button
               type="button"
               class={`p-4 w-full text-left cursor-pointer hover:bg-gray-700 ${selectedMenu === "Health Check" ? "bg-blue-600" : ""}`}
-              on:click={() => selectMenu("Health Check")}
+              onclick={() => selectMenu("Health Check")}
             >
               Health Check
               </button>
@@ -42,7 +44,7 @@
               <button
               type="button"
               class={`p-4 w-full text-left cursor-pointer hover:bg-gray-700 ${selectedMenu === "自定义清理" ? "bg-blue-600" : ""}`}
-              on:click={() => selectMenu("自定义清理")}
+              onclick={() => selectMenu("自定义清理")}
             >
               自定义清理
               </button>
@@ -55,7 +57,6 @@
 
     <main class="flex-grow bg-gray-100 p-8">
       <!-- Main content -->
-
       <Route path="/" component={Home} />
       <Route path="/settings" component={Settings} />
     </main>
