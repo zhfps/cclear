@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2.0.0",
-  "productName": "cclear",
+  "productName": "cleaner",
   "version": "0.0.1",
-  "identifier": "com.cclear.app",
+  "identifier": "com.cleaner.app",
   "build": {
     "beforeDevCommand": "pnpm dev",
     "devUrl": "http://localhost:1420",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "cclear",
+        "title": "cleaner",
         "transparent": true,
         "decorations": true,
         "width": 800,

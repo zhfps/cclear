@@ -3,7 +3,7 @@
   import Home from "../view/Home.svelte"
   import Settings from "../view/Settings.svelte"
   type MenuItem =
-    | "Health Check"
+    | "Calendar"
     | "自定义清理"
     | "性能优化器"
     | "Driver Updater"
@@ -11,8 +11,7 @@
     | "工具"
     | "选项";
 
-
-  let selectedMenu: MenuItem = $state("Health Check")
+  let selectedMenu: MenuItem = $state("Calendar")
   function selectMenu(menu: MenuItem) {
     selectedMenu = menu
   }
@@ -21,32 +20,27 @@
 <div class="flex h-screen">
   <Router>
     <aside class="w-64 bg-gray-800 text-white flex flex-col">
-      <div class="p-4 text-lg font-bold">CCleaner Professional</div>
       <nav class="flex-grow">
         <ul>
           <li>
-            <Link
-              to="/"
-              >
+            <Link to="/">
               <button
-              type="button"
-              class={`p-4 w-full text-left cursor-pointer hover:bg-gray-700 ${selectedMenu === "Health Check" ? "bg-blue-600" : ""}`}
-              onclick={() => selectMenu("Health Check")}
-            >
-              Health Check
+                type="button"
+                class={`p-4 w-full text-left cursor-pointer hover:bg-gray-700 ${selectedMenu === "Calendar" ? "bg-blue-600" : ""}`}
+                onclick={() => selectMenu("Calendar")}
+              >
+              Calendar
               </button>
             </Link>
           </li>
           <li>
-            <Link
-              to="/settings"
-              >
+            <Link to="/settings">
               <button
-              type="button"
-              class={`p-4 w-full text-left cursor-pointer hover:bg-gray-700 ${selectedMenu === "自定义清理" ? "bg-blue-600" : ""}`}
-              onclick={() => selectMenu("自定义清理")}
-            >
-              自定义清理
+                type="button"
+                class={`p-4 w-full text-left cursor-pointer hover:bg-gray-700 ${selectedMenu === "自定义清理" ? "bg-blue-600" : ""}`}
+                onclick={() => selectMenu("自定义清理")}
+              >
+                自定义清理
               </button>
             </Link>
           </li>
@@ -55,7 +49,7 @@
       </nav>
     </aside>
 
-    <main class="flex-grow bg-gray-100 p-8">
+    <main class="flex-grow bg-gray-100 p-8 overflow-y-auto">
       <!-- Main content -->
       <Route path="/" component={Home} />
       <Route path="/settings" component={Settings} />

@@ -1,6 +1,6 @@
 <script lang="ts">
   import Layout from './layout/Layout.svelte'
 </script>
-  <div class="h-screen x-screen">
+  <div class="y-screen x-screen overflow-y-hide">
     <Layout />
   </div>
