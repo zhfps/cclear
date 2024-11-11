@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Icon from '@iconify/svelte'
   import { format, addMonths, subMonths, startOfMonth, endOfMonth, startOfWeek, endOfWeek, eachDayOfInterval } from 'date-fns'
   //@ts-expect-error nothing
   import zhCN from 'date-fns/locale/zh-CN'
@@ -35,11 +36,11 @@
   <!-- 导航栏 -->
   <div class="flex justify-between items-center mb-2">
     <button on:click={previousMonth} class="p-2 text-gray-500">
-      &lt;
+      <Icon icon="mingcute:left-fill" />
     </button>
     <span class="text-lg font-semibold">{format(currentMonth, 'yyyy年MM月', { locale: zhCN })}</span>
     <button on:click={nextMonth} class="p-2 text-gray-500">
-      &gt;
+      <Icon icon="mingcute:right-fill" />
     </button>
   </div>
 
